@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/giphy"
+        android:label="Realtime Skin Detection Using YOLOV5"
+        android:roundIcon="@drawable/giphy"
+        android:supportsRtl="true"
+        android:theme="@style/Base.Theme.YOLOv5TfLite"
+        tools:targetApi="31">
+        <activity  android:exported="false" android:name=".feature.home.MainActivity"
+            android:theme="@style/Base.Theme.YOLOv5TfLite">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity  android:exported="true" android:name=".feature.home.OnBoardingActivity"
+            android:theme="@style/AppTheme.OnBoarding">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
